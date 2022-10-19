@@ -1,7 +1,9 @@
-
+//declare and initialize a variable.
 let myImage;
 
-
+//for the importing images before function setup there should be 
+//function preload for images that in this case the address of image
+//file must be specified.
 function preload() {
  myImage = loadImage("./assets/tree.png");
 }
@@ -23,6 +25,7 @@ var interator = 0;
 function draw() {
   push();
   
+  //increment the value of interator variable.
   interator ++;
   let y = interator;
   let x = noise(interator/200) * width;
@@ -32,7 +35,8 @@ function draw() {
   
 
 
-
+//each time when mouse is pressed the color of the line change from
+//whith to black.
   if (mouseIsPressed == true) {
 
     stroke(0);
@@ -85,7 +89,7 @@ fill(255);
 
   ellipse(680, 300, 400);
 
- 
+ //the scale of image
  image(myImage, 480, 80, 400, 450);
 
  
